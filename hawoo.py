@@ -228,13 +228,13 @@ def cat_walk_animation(steps=20, delay=0.1):
         ],
     ]
     for step in range(steps):
-        sys.stdout.write("\033[H\033[J")  # Clear screen (ANSI escape)
+        sys.stdout.write("\033[H\033[J")
         padding = " " * step
-        frame = cat_frames[step % 8]  # Ganti frame kaki tiap langkah
+        frame = cat_frames[step % 8]
         for line in frame:
             print(padding + line)
         time.sleep(delay)
-    print()  # Baris kosong setelah animasi
+    print()
 
 def main():
     banner_panel_with_cat("HAWOOO")
